@@ -1,6 +1,11 @@
 @extends('app')
 
-@section('title','情報修正依頼')
+@section('title')
+    {{$course->name}}
+    ({{$course->area}})
+    情報修正依頼
+    -ショートコース大全
+@stop
 
 @section('content')
     @include('nav')

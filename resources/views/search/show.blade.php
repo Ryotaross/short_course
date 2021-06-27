@@ -1,6 +1,10 @@
 @extends('app')
 
-@section('title','{{$course->name}}')
+@section('title')
+    {{$course->name}}
+    ({{$course->area}})
+    -ショートコース大全
+@stop
 
 @section('content')
     @include('nav')

@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'ログイン')
+@section('title', 'ログイン--ショートコース大全')
 
 @section('content')
   <div class="container">

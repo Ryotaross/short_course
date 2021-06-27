@@ -1,6 +1,9 @@
 @extends('app')
 
-@section('title','編集')
+@section('title')
+    {{$user->name}}さんのマイページ編集
+    -ショートコース大全
+@stop
 
 @section('content')
     @include('nav')

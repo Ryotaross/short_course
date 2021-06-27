@@ -1,6 +1,10 @@
 @extends('app')
 
-@section('title','編集')
+@section('title')
+    {{$course->name}}
+    ({{$course->area}})　編集画面
+    -ショートコース大全
+@stop
 
 @section('content')
     @include('nav')

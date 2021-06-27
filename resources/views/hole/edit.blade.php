@@ -1,6 +1,10 @@
 @extends('app')
 
-@section('title','ホール登録')
+@section('title')
+    {{$course->name}}
+    ({{$course->area}})ホール情報修正
+    -ショートコース大全
+@stop
 
 @section('content')
     @include('nav')

@@ -1,6 +1,9 @@
 @extends('app')
 
-@section('title','登録')
+@section('title')
+    {{$user->name}}さんのマイページ登録
+    -ショートコース大全
+@stop
 
 @section('content')
     @include('nav')

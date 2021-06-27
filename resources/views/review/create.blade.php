@@ -1,6 +1,12 @@
 @extends('app')
 
-@section('title','登録')
+@section('title')
+    @section('title')
+    {{$course->name}}
+    ({{$course->area}})
+    レビュー作成画面
+    -ショートコース大全
+@stop
 
 @section('content')
     @include('nav')

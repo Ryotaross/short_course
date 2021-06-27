@@ -1,6 +1,9 @@
 @extends('app')
 
-@section('title','一覧')
+@section('title')
+    ショートコース検索結果一覧
+    -ショートコース大全
+@stop
 
 @section('content')
     @include('nav')
