@@ -42,8 +42,24 @@ Route::prefix('course/{course}')->group(function(){
     Route::resource('/review','ReviewController')->except(['edit','update']);
 });
 
+Route::prefix('course/{course}')->group(function(){
+    Route::resource('/offer','OfferController')->except(['edit','update','index','show','destroy']);
+});
+
+Route::prefix('/control')->group(function(){
+    Route::get('/offer','OfferController@index')->name('offer.index');
+
+    Route::get('/offer/{offer}','OfferController@show')->name('offer.show');
+
+    Route::delete('/offer/{offer}/destroy','OfferController@destroy')->name('offer.destroy');
+
+});
+
+
 
 Route::resource('/myinfo','MyinfoController')->except(['destroy']);
+
+
 
 /*
 Route::prefix('course/{course}')->group(function(){

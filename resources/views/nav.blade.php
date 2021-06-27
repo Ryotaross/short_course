@@ -9,6 +9,9 @@
     <li class="nav-item">
       <a class="nav-link" href="{{ route('course.create') }}">作成</a>
     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="{{ route('offer.index') }}">管理画面</a>
+    </li>
     @endif
 
     @guest

@@ -293,6 +293,7 @@
                         @endif
                      </ul>
                 </div>
+                <a class="my-5 text-decoration-none d-block mx-auto" href="{{ route('offer.create',compact('course')) }}"><i class="fas fa-angle-double-right"></i>情報を修正</a>
             </div>
         </div>
     </div>
