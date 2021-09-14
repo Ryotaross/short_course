@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title','ゴルフ')
+@section('title','ショートコース大全--ショートコース特化型ゴルフ場検索サイト')
 
 @section('content')
 
@@ -20,7 +20,7 @@
           <div class="row align-items-center">
             <div class="col-12 col-md-12 col-sm-6">
               <p class="mb-0 text-white text-center">ショートコース特化型ゴルフコース検索サイト</p>
-              <h1 class="mb-0 text-white display-3 py-2">ショートコース大全</h1>
+              <h1 class="mb-0 text-white display-5 py-2">ショートコース集</h1>
               <div class="btn-group btn-group-lg d-flex align-items-center" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-white text-success">キーワード</button>
                 <button type="button" class="btn btn-white text-success " id="click">都道府県</button>

@@ -27,7 +27,7 @@
                           <tr>
                             <th scope="row" style="color: #666666;">{{$offer->course->name}}</th>
                             <td>{{$offer->user->name}}</td>
-                            <td>{{$offer->body}}</td>
+                            <td>{!! nl2br(e(Str::limit($offer->body, 20))) !!}</td>
                             <td><a class="text-dark border-bottom" href="{{ route('offer.show',['offer'=>$offer]) }}">詳細</a></td>
                             <td>
                                 <form method="POST" action="{{ route('offer.destroy', compact('offer')) }}">

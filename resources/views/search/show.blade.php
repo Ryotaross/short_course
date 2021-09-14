@@ -9,11 +9,14 @@
 @section('content')
     @include('nav')
     <div class="heavy-rain-gradient">
-        <div class="container d-flex justify-content-center align-items-center h-100 ">
+        <div class="container-fluid">
+            <div class=" d-flex justify-content-center align-items-center h-100 ">
             <div class="card col-12 my-5">
                 <div class="card-body my-5 mx-3">
                     <div class="row">
-                    <h1 class="card-title">{{$course->name}}</h1>
+                    <h1 class="card-title d-none d-md-block">{{$course->name}}</h1>
+                    <h6 class="card-title d-block d-md-none font-weight-bold">{{$course->name}}</h6>
+                    <p class="card-text d-block d-md-none">{{$course->address}}</p>
                     <div class="card-body pt-0 pb-2 pl-3 text-right">
                         <div class="card-text">
                             <course-like
@@ -89,7 +92,7 @@
                         </div>
                     @endif
                     </div>
-                    <p class="card-text">{{$course->address}}</p>
+                    <p class="card-text d-none d-md-block">{{$course->address}}</p>
 
                     <h5 class="card-title mt-5 mb-4 "><i class="fas fa-greater-than mr-3"></i>コース情報</h5>
                     @if(count($holes) == 0)
@@ -161,11 +164,12 @@
 
                     <h5 class="card-title mt-5 mb-4"><i class="fas fa-greater-than mr-3"></i>基本情報</h5>
                     <div class="clearfix">
-                        <div class="col-6 float-left">
+                        <div class="col-12 col-md-6 float-left">
                             <img  class="img-fluid" src="{{ asset('storage/avatar/' . $course->img) }}" alt="画像" 
                             style="width:80vh;"/>
+                            <div id="map" style="height:500px"></div>
                         </div>
-                        <ul class="list-group list-group-flush col-6 float-right">
+                        <ul class="list-group list-group-flush col-12 col-md-6 float-right">
                             <li class="list-group-item">
                                 <div class="clearfix col-12">
                                     <div class="bold float-left">施設名 &emsp; &emsp;</div>
@@ -267,7 +271,7 @@
                      <ul class="list-group list-group-flush">
                         @foreach($reviews as $review)
                         <li class="list-group-item">
-                        <div class="col-8 my-1">
+                        <div class="col-12 col-md-8 my-1">
                             <div class="card-body d-flex flex-row">
                             <i class="fas fa-user-circle fa-3x mr-1"></i>
                             <div>
@@ -300,6 +304,12 @@
                 <a class="my-5 text-decoration-none d-block mx-auto" href="{{ route('offer.create',compact('course')) }}"><i class="fas fa-angle-double-right"></i>情報を修正</a>
             </div>
         </div>
+        </div>
     </div>
 @include('footer')
+
+<script src="{{ asset('js/result.js') }}"></script>
+　　　　　<script src="https://maps.googleapis.com/maps/api/jslanguage=ja&region=JP&key=AIzaSyCr0Rm18CxG63ueKkXlkNw-tbOIkAlziXU&callback=initMap" async defer>
+	</script>
+
 @endsection

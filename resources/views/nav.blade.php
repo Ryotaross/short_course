@@ -1,10 +1,11 @@
 
 <nav class="navbar navbar-expand navbar-dark dusty-grass-gradient">
 
-  <a class="navbar-brand" href="/"><i class="fas fa-golf-ball mr-1"></i>ショートコース大全</a>
+  <a class="navbar-brand d-none d-md-block" href="/"><i class="fas fa-golf-ball mr-1"></i>ショートコース大全</a>
+  <a class="navbar-light text-white d-block d-md-none" href="/"><i class="fas fa-golf-ball mr-1 text-primary"></i>ショートコース大全</a>
   
   <ul class="navbar-nav ml-auto">
-    
+    @auth
     @if( Auth::id() === 1 )
     <li class="nav-item">
       <a class="nav-link" href="{{ route('course.create') }}">作成</a>
@@ -13,6 +14,7 @@
       <a class="nav-link" href="{{ route('offer.index') }}">管理画面</a>
     </li>
     @endif
+    @endauth
 
     @guest
     <li class="nav-item dropdown">

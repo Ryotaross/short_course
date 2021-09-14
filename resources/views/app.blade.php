@@ -25,11 +25,14 @@
     width:100%;
     background: rgba(0, 0, 0, .4);
   }
+  .wrapper{
+    overflow: hidden;
+  }
     </style>
 </head>
 
 <body>
-  <div id="app">
+  <div id="app" class="wrapper">
     @yield('content')
   </div>
   

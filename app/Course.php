@@ -65,7 +65,4 @@ class Course extends Model
     {
         return $this->wents->count();
     }
-    public function reviews() {
-        return $this->hasMany('App\Review');
-    }
 }

@@ -53,11 +53,11 @@
                             <i class="fas fa-user-circle fa-3x mr-1"></i>
                             <div>
                                
-                                <div class="ml-4 pt-1 font-weight-bold">
-                                {{ $review->user->name }} 
+                                <div class="ml-1 pt-1 font-weight-bold">
+                                {{$review->course->name}}
                                 </div>
 
-                                <div class="font-weight-lighter">
+                                <div class="ml-1 font-weight-lighter">
                                 {{ $review->created_at->format('Y/m/d') }} 
                                 <span class="ml-3">本日のスコア：{{ $review->score }} </span>
                                 </div>
