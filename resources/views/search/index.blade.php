@@ -32,7 +32,7 @@
         </div>
         <div class="container d-flex justify-content-center align-items-center h-100 ">
         
-            <div class="card my-5 col-12" style="width: 18rem;">
+            <div class="card my-5 col-12" style="width: 19rem;">
                 <ul class="list-group list-group-flush">
                     @if(count($courses) != 0)
                         @foreach($courses as $course)
