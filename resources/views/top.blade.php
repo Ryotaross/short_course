@@ -21,11 +21,13 @@
             <div class="col-12 col-md-12 col-sm-6">
               <p class="mb-0 text-white text-center">ショートコース特化型ゴルフコース検索サイト</p>
               <h1 class="mb-0 text-white display-5 py-2">ショートコース集</h1>
+              <!--
               <div class="btn-group btn-group-lg d-flex align-items-center" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-white text-success">キーワード</button>
                 <button type="button" class="btn btn-white text-success " id="click">都道府県</button>
-                <!--<button type="button" class="btn btn-white text-success">特徴</button>-->
+                <!--<button type="button" class="btn btn-white text-success">特徴</button>
             　</div>
+            　-->
               <div class="">
                 <form method="GET" action="{{ route('course.index') }}" >
                   <div class="align-items-center">
@@ -45,7 +47,7 @@
   <!--Section: Design Block-->
 
   @include('footer')
-  @include('pref')
+  <!--@include('pref')-->
    <!--<div class="container my-5 py-5"></div>-->
 </main>
 

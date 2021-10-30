@@ -12,11 +12,13 @@
             <div class="card text-center mt-5 col-12 " style="width: 18rem;">
                 <div class="card-body">
                 
+                <!--
                     <p class="card-text border col-12 col-md-3 text-left px-3 py-3 mr-3" id="click">
                         <span class="text-primary pr-1">地域</span>
                         <span class="text-claer">選択する</span>
                         <span class="float-right"><i class="fas fa-plus-circle ml-5" ></i></span>
                     </p>
+                -->
                     
                     <form method="GET" action="{{ route('course.index') }}" >
                         <div class="clearfix align-items-center">
@@ -96,5 +98,5 @@
         </div>
     </div>
     @include('footer')
-    @include('pref')
+   <!-- @include('pref') -->
 @endsection
