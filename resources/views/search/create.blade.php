@@ -13,6 +13,7 @@
                     @include('error_card_list')
                     <div class="card-text">
                         <form method="POST" action="{{ route('course.store') }}" enctype="multipart/form-data">
+                            @csrf
                             @include('search.form')
                         </form>
                     </div>
